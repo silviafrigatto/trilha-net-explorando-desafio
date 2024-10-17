@@ -15,7 +15,12 @@ namespace DesafioProjetoHospedagem.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
         {
-            if (Suite.Capacidade >= Hospedes.Count)
+            
+            if(Suite == null)
+            {
+                throw new InvalidOperationException("A suíte não foi cadastrada.");
+            }
+            else if (Suite.Capacidade >= hospedes.Count)
             {
                 Hospedes = hospedes;
             }
