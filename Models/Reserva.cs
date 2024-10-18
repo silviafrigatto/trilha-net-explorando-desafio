@@ -26,7 +26,7 @@ namespace DesafioProjetoHospedagem.Models
             }
             else
             {
-                throw new ArgumentException("A quantidade de hóspedes é maior que a capacidade da suíte.");
+                throw new ArgumentException("A quantidade de hóspedes não pode exceder a capacidade da suíte.");
             }
         }
 
